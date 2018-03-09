@@ -9,7 +9,7 @@
     "clean": "rimraf dist",
     "lint": "tslint --project tslint.json",
     "prepublish": "npm run build",
-    "test": "npm run lint && mocha tests/**/*.ts --compilers ts:ts-node/register"
+    "test": "npm run lint && mocha tests/**/*.ts --require ts-node/register"
   },
   "repository": {
     "type": "git",
