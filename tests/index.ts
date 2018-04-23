@@ -1,4 +1,4 @@
-import { User, UserCreationRequest } from '../src/index'
+import { User, UserCreationRequest, UserChangeOfStatusRequest, UserStatus } from '../src/index'
 import 'mocha'
 import * as assert from 'assert'
 
@@ -27,5 +27,17 @@ describe('UserCreationRequest', () => {
     }
 
     assert.equal(userCreationRequest.name, 'Name')
+  })
+})
+
+describe('UserChangeOfStatusRequest', () => {
+
+  it('should have status', () => {
+    let userChangeOfStatusRequest: UserChangeOfStatusRequest = {
+      id: 1,
+      status: UserStatus.Active
+    }
+
+    assert.equal(userChangeOfStatusRequest.status, 'ACTIVE')
   })
 })
