@@ -10,3 +10,11 @@ export interface UserCreationRequest {
     name: string;
     phoneNumbers: string[];
 }
+export interface UserChangeOfStatusRequest {
+    id: number;
+    status: UserStatus;
+}
+export declare enum UserStatus {
+    Active = "ACTIVE",
+    Disabled = "DISABLED",
+}
